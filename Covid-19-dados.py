@@ -1,9 +1,10 @@
+#Importando as coisas que o código precisa para funcionar
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
 
-
+#def que retorna a informação
 def RetornarResposta(req):
     print("0 = Visão geral")
     print ("1 = Casos ativos no mundo")
@@ -25,7 +26,8 @@ def RetornarResposta(req):
     else:
         print(df[0])
 
-
+        
+#def que inicia o programa
 def Iniciar():
     print("Conectando com o banco de dados...")
     req = requests.get("https://www.worldometers.info/coronavirus/coronavirus-cases/")
